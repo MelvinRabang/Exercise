@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+parcel:
+  reject-weight: 50
+  heavy-weight: 10
+  heavy-weight-cost: 20
+  small-volume: 1500
+  medium-volume: 2500
+  small-volume-cost: 0.03
+  medium-volume-cost: 0.04
+  large-volume-cost: 0.05
+
+voucher-code:
+  client:
+    base-url: 'https://mynt-exam.mocklab.io/voucher'
+    key: apikey

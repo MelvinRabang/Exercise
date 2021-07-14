@@ -1,10 +1,10 @@
-package com.melvinrabang.exercise;
+package com.melvinrabang.parcel.delivery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ExerciseApplicationTests {
+class ParcelDeliveryApplicationTests {
 
 	@Test
 	void contextLoads() {
