@@ -21,7 +21,8 @@ public class ParcelDeliveryCostController {
                                                             @RequestParam(required = true) Integer width,
                                                             @RequestParam(required = true) Integer length,
                                                             @RequestParam(required = false) String voucherCode) throws Exception {
-        return parcelDeliveryCostService.getParcelDeliveryCost(weight, height, width, length, voucherCode);
+        ParcelDeliveryCostResponse parcelDeliveryCostRespons =  parcelDeliveryCostService.getParcelDeliveryCost(weight, height, width, length, voucherCode);
+        return parcelDeliveryCostRespons;
 
     }
 

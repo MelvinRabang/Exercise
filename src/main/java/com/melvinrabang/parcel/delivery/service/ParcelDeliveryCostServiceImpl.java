@@ -39,7 +39,7 @@ public class ParcelDeliveryCostServiceImpl implements ParcelDeliveryCostService 
     private BigDecimal calculateParcelDeliveryCost(Integer weight, Integer volume) throws WeightTooHeavyException {
         BigDecimal totalCost;
         BigDecimal weightBigDecimal = new BigDecimal(weight);
-        BigDecimal volumeBigDecimcal = new BigDecimal(volume);
+        BigDecimal volumeBigDecimal = new BigDecimal(volume);
 
         if (parcelConfigurationProperty.getRejectWeight() < weight) {
 
@@ -52,15 +52,15 @@ public class ParcelDeliveryCostServiceImpl implements ParcelDeliveryCostService 
 
         } else if (parcelConfigurationProperty.getSmallVolume() > volume) {
 
-            totalCost = new BigDecimal(parcelConfigurationProperty.getSmallVolumeCost()).multiply(volumeBigDecimcal);
+            totalCost = new BigDecimal(parcelConfigurationProperty.getSmallVolumeCost()).multiply(volumeBigDecimal);
 
         } else if (parcelConfigurationProperty.getMediumVolume() > volume) {
 
-            totalCost = new BigDecimal(parcelConfigurationProperty.getHeavyWeightCost()).multiply(volumeBigDecimcal);
+            totalCost = new BigDecimal(parcelConfigurationProperty.getHeavyWeightCost()).multiply(volumeBigDecimal);
 
         } else {
 
-            totalCost = new BigDecimal(parcelConfigurationProperty.getLargeVolumeCost()).multiply(volumeBigDecimcal);
+            totalCost = new BigDecimal(parcelConfigurationProperty.getLargeVolumeCost()).multiply(volumeBigDecimal);
 
         }
         return totalCost;
